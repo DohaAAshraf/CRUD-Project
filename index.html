@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- SweetAlert CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<!-- SweetAlert JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <title> CRUD SYSTEM</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  
+  <div class="dashboard">
+    <div class="dashboard-header">
+    </div>
+    <div class="dashboard-content">
+      <div class="stat-card">
+        <h3>Total Products</h3>
+        <p id="totalProducts">0</p>
+      </div>
+     
+      <div class="stat-card">
+        <h3>Total Sales</h3>
+        <p id="totalSales">$0.00</p>
+      </div>
+    </div>
+  </div>
+  
+
+<div class="crud">
+    <div class="head">
+      <h1 class="title">PRODUCT MANAGEMENT SYSTEM</h1>
+      
+      <!-- <p>PRODUCT MANAGEMENT SYSTEM</p> -->
+    </div>
+    
+    <i id="toggle-theme" class="fas fa-moon"></i>
+  
+
+<!-- inputs -->
+  <div class="inputs">
+   
+       <input type="text" placeholder="ProductName" id="name">
+       <input type="text" placeholder="ProductCategory" id="category">
+
+    <div class="price">
+      <input  type="number" placeholder="ProductPrice" id="price" >
+      <input  type="number" placeholder="Discount (%)" id="discount">
+   
+      <small id="total"> </small>
+    </div>
+      <input type="text" placeholder="ProductDescription" id="description">
+      <button id="submit">Create</button> <button id="clear">Clear</button> 
+  </div>
+
+<!-- outputs -->
+<div class="outputs">
+  <div class="search-container">
+    <i id= "searchButton" class="fas fa-search" ></i>
+    <input type="text" class="search-input" placeholder="Search" id ="search">
+  </div>
+    
+    
+  <button id="deleteAll">Delete All</button>
+  
+
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+ 
+      
+
+ <script src="main.js" defer></script>
+</body>
+</html>
